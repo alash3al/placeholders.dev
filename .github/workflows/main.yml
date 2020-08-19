@@ -60,6 +60,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           environment: 'production'
+        env: 
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
 
       # these folders have secrets/configs in them that prevent the cache from running successfully
       # TODO: remove when https://github.com/actions/cache/issues/133 has a solution
